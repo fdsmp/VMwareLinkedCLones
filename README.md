@@ -37,3 +37,5 @@ MIT License
 ![Vérification des paramètres](screenshots/linkedclonesscreen3.png)
 
 ![Fin de déploiement](screenshots/linkedclonesscreen4.png)
+
+![Vue vCenter](screenshots/linkedclonesscreen5.png)
