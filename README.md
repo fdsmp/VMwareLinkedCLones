@@ -30,5 +30,5 @@ MIT License
 
 ## Screeshots
 
-![Menu principal] (https://drive.google.com/file/d/1UHPFwq9LmyEoStjEX933xFhtB0oz9zV9/view?usp=sharing)
+![Menu principal] (https://ibb.co/F88h12N)
 
