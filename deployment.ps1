@@ -29,7 +29,10 @@ if ($sourceVM -eq $null) {
     Disconnect-VIServer -Confirm:$false # Déconnexion de vCenter en cas d'erreur
     exit
 }
+# Confirmation nom du template
 
+Write-Host "Template .................. OK" -ForegroundColor Green
+Write-Host ""
 
 # Vérification de l'existence du datastore
 $datastore = Get-Datastore -Name $datastoreName
@@ -40,6 +43,10 @@ if ($datastore -eq $null) {
     Disconnect-VIServer -Confirm:$false
     exit
 }
+# Confirmation de l'existance du datastore
+
+Write-Host "Datastore ................. OK" -ForegroundColor Green
+Write-Host ""
 
 # Vérification de l'unicité du pool de ressources
 $resourcePool = Get-ResourcePool -Name $resourcePoolName
@@ -51,6 +58,9 @@ if ($resourcePool -eq $null) {
     exit
 }
 
+Write-Host "ResourcePool .............. OK" -ForegroundColor Green
+Write-Host ""
+
 # Vérification de l'unicité du dossier
 $folder = Get-Folder -Name $folderName
 if ($folder -eq $null) {
@@ -61,9 +71,12 @@ if ($folder -eq $null) {
     exit
 }
 
+Write-Host "VM Folder ................. OK" -ForegroundColor Green
+Write-Host ""
+
 # Résumé avant déploiement
 Write-Host ""
-Write-Host -ForegroundColor Cyan "<< CONFIGURATION DU DEPLOIEMENT >>"
+Write-Host -ForegroundColor Green "CONFIGURATION DU DEPLOIEMENT"
 $configurationTable = @{
     "VM Source" = $sourceVMName
     "Quantité de clones" = $numberOfClones
@@ -82,11 +95,13 @@ if ($reponse -eq "N") {
     exit
 } 
 
-## Création d'un snapshot pour le déploiement de clones liés
-$snapshotName = "Deployment Snapshot"
+########### Ojbets valides, début déploiement
 
-Write-Host ""
-Write-Host -ForegroundColor Cyan "<< CREATION D'UN SNAPSHOTS >>"
+## Création d'un snapshot pour le déploiement de clones liés
+$snapshotName = "Deployment"
+
+
+Write-Host -ForegroundColor Green "CREATION D'UN SNAPSHOTS..."
 Write-Host ""
 
 # Récup des snapshots de la VM source
@@ -94,7 +109,7 @@ $snapshots = Get-Snapshot -VM $sourceVM
 
 # Vérif si un snapshot nommé Deployment Snapshot existe déjà
 if ($snapshots.Name -eq $snapshotName){
-    Write-Host -ForegroundColor Red "Un snapshot nommé 'Deployment Snapshot' existe déjà."
+    Write-Host -ForegroundColor Red "Un snapshot nommé 'Deployment' existe déjà."
     Write-Host -ForegroundColor Red "Vous devez le supprimer ou le renommer, puis relancer le script."
     Write-Host ""
     exit
@@ -113,12 +128,12 @@ if ($snapshots.Count -gt 0) {
     }
 }
 
-########### Ojbets valides, début déploiement
-
 # Création du snapshot
+
 New-Snapshot -VM $sourceVM -Name $snapshotName -Description "Snapshot for linked cloning" -Memory:$false -Quiesce:$true     
 
 ########### Déploiement des clones
+
 for ($i = 1; $i -le $numberOfClones; $i++) {
     # Formater le numéro de séquence avec deux chiffres
     $sequenceNumber = $i.ToString().PadLeft(2, '0')
