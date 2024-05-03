@@ -22,10 +22,7 @@ This PowerShell script provides a simple and efficient solution to automate the 
 
 ## Author
 
-Philippe PEREIRA
-Infrastructure Engineer
-Adjunct Lecturer
-University of Technology of Troyes
+Philippe PEREIRA - Infrastructure Engineer - University of Technology of Troyes
 
 ## License
 
