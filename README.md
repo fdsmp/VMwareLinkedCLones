@@ -32,3 +32,8 @@ MIT License
 
 ![Menu principal](screenshots/linkedclonesscreen.png)
 
+![Connexion à vCenter](screenshots/linkedclonesscreen2.png)
+
+![Vérification des paramètres](screenshots/linkedclonesscreen3.png)
+
+![Fin de déploiement](screenshots/linkedclonesscreen4.png)
