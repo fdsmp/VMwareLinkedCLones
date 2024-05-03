@@ -1,3 +1,37 @@
+################################################################
+# Script de déploiement de clones liés en env VMware vSphere   #
+# Auteur: Philippe PEREIRA                                     #
+# Date: 03/05/2024                                             #
+################################################################
+
+########### Déclaration des fonctons
+
+
+# function PoserQuestionOuiNon {
+#     param([string]$message)
+
+#     # Boucle jusqu'à obtenir une réponse valide
+#     do {
+#         $reponse = Read-Host "$message (o/n)"
+#         $reponse = $reponse.ToLower().Trim()
+
+#         # Vérifier si la réponse est valide
+#         if ([string]::IsNullOrEmpty($reponse)) {
+#             Write-Host "Veuillez saisir une réponse."
+#         } elseif ($reponse -eq "o" -or $reponse -eq "n") {
+#             return $reponse
+#         } else {
+#             Write-Host "Réponse invalide. Veuillez répondre 'o' pour Oui ou 'n' pour Non."
+#         }
+#     } until ($true)
+# }
+
+# function PoserQuestion {
+#     param([string]$message)
+#     Write-Host $message -NoNewline
+# }
+
+##### Affichage d'une bannière de bienv
 
 Write-Host " ______  _                                            _ " -ForegroundColor Green
 Write-Host "(____  \(_)                                          | |" -ForegroundColor Green

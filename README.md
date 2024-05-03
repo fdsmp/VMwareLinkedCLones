@@ -15,7 +15,7 @@ This PowerShell script provides a simple and efficient solution to automate the 
 ## Usage
 
 1. Ensure you have the VMware PowerCLI modules installed and configured on your machine.
-2. Run the `LinkedClonesWIzard.ps1` script specifying appropriate parameters such as the template name to clone, the name, and characteristics of the new virtual machines.
+2. Run the `LinkedClonesWizard.ps1` script specifying appropriate parameters such as the template name to clone, the name, and characteristics of the new virtual machines.
 3. Sit back and relax! Your linked clones will be deployed quickly and efficiently.
 
 **Note:** Make sure to understand the implications and performance requirements of linked clones before deploying them in your production environment. Consult VMware's official documentation for more information.
@@ -27,3 +27,8 @@ Philippe PEREIRA - Infrastructure Engineer - University of Technology of Troyes
 ## License
 
 MIT License
+
+## Screeshots
+
+![Menu principal] (https://drive.google.com/file/d/1UHPFwq9LmyEoStjEX933xFhtB0oz9zV9/view?usp=sharing)
+
