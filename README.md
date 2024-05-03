@@ -30,5 +30,5 @@ MIT License
 
 ## Screeshots
 
-![Menu principal] (https://ibb.co/F88h12N)
+![Menu principal](screenshots/linkedclonesscreen.png)
 
