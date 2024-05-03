@@ -1,31 +1,32 @@
 # VMwareLinkedCLones
 Automated Deployment of Linked Clones in VMware vSphere Environment
 
-# Déploiement Automatisé de Clones Liés VMware vSphere
-
 ## Description
 
-Ce script PowerShell offre une solution simple et efficace pour automatiser le déploiement de clones liés dans un environnement VMware vSphere. Les clones liés sont une approche intelligente pour économiser de l'espace disque et accélérer le déploiement de machines virtuelles en partageant les disques durs virtuels (VMDK) entre plusieurs machines.
+This PowerShell script provides a simple and efficient solution to automate the deployment of linked clones in a VMware vSphere environment. Linked clones are a smart approach to saving disk space and speeding up virtual machine deployment by sharing virtual hard disks (VMDKs) among multiple machines.
 
-## Fonctionnalités clés
+## Key Features
 
-- **Déploiement Rapide :** Automatisez le processus fastidieux de déploiement de clones liés en quelques lignes de code.
-- **Personnalisable :** Configurez facilement les paramètres de votre déploiement, tels que le nom de la machine virtuelle, la configuration réseau et les spécifications matérielles.
-- **Gestion des Ressources :** Maximisez l'utilisation de votre infrastructure en réduisant l'espace disque requis pour chaque clone tout en maintenant des performances optimales.
-- **Intégration vSphere :** Utilisez les API vSphere pour une intégration fluide avec votre environnement VMware existant.
+- **Rapid Deployment:** Automate the tedious process of deploying linked clones in just a few lines of code.
+- **Customizable:** Easily configure deployment parameters such as the template name, the number of desired clones, the resource pool, the datastore, and the destination folder.
+- **Resource Management:** Maximize the utilization of your infrastructure by reducing the required disk space for each clone while maintaining optimal performance.
+- **vSphere Integration:** Utilize vSphere APIs for seamless integration with your existing VMware environment.
 
-## Utilisation
+## Usage
 
-1. Assurez-vous d'avoir les modules VMware PowerCLI installés et configurés sur votre machine.
-2. Exécutez le script PowerShell en spécifiant les paramètres appropriés, tels que le nom du template à cloner, le nom et les caractéristiques de la nouvelle machine virtuelle.
-3. Sit back and relax! Vos clones liés seront déployés rapidement et efficacement.
+1. Ensure you have the VMware PowerCLI modules installed and configured on your machine.
+2. Run the `LinkedClonesWIzard.ps1` script specifying appropriate parameters such as the template name to clone, the name, and characteristics of the new virtual machines.
+3. Sit back and relax! Your linked clones will be deployed quickly and efficiently.
 
-**Note :** Assurez-vous de comprendre les implications et les exigences de performance des clones liés avant de les déployer dans votre environnement de production. Consultez la documentation officielle de VMware pour plus d'informations.
+**Note:** Make sure to understand the implications and performance requirements of linked clones before deploying them in your production environment. Consult VMware's official documentation for more information.
 
-## Auteur
+## Author
 
-[Votre Nom]
+Philippe PEREIRA
+Infrastructure Engineer
+Adjunct Lecturer
+University of Technology of Troyes
 
-## Licence
+## License
 
 MIT License
